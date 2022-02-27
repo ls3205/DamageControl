@@ -1,5 +1,6 @@
 import DiscordJS from 'discord.js';
 import dotenv from 'dotenv';
+import { keepAlive } from './server';
 dotenv.config();
 const TOKEN = process.env.TOKEN;
 
@@ -46,4 +47,5 @@ client.on('guildMemberAdd', member => {
     }
 });
 
+keepAlive();
 client.login(TOKEN);
