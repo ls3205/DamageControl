@@ -7,6 +7,7 @@ const TOKEN = process.env.TOKEN;
 const client = new DiscordJS.Client({ intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES', 'GUILD_PRESENCES'] });
 const coucilList = ['500709006021623809', '447491395175972865', '344108529335926785', '562956997482250240', '314811526521290753', '627242960068804628'];
 
+// @ts-ignore
 function addRoles(roles, member)  {
     for (const role of roles) {
         if (!role) return;
